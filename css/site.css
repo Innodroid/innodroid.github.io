@@ -1,0 +1,166 @@
+.jumbotron.main {
+  background-image: url("http://res.cloudinary.com/innodroid/image/upload/v1401374852/9256_wpm_hires_lcerst.jpg");
+}
+
+.jumbotron.projects {
+  background-image: url("http://res.cloudinary.com/innodroid/image/upload/v1401536642/code_ihdfez.jpg");
+}
+
+.jumbotron h1 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron h1 small {
+	color: #999;
+}
+
+.jumbotron h2 {
+    font-family: 'Bangers', cursive;
+    color: #505050;
+}
+
+p.hdr {
+    font-size: larger;
+}
+
+.testimonial .well {
+  cursor: pointer;
+}
+
+.testimonial-quotechar {
+  float: left;
+  font-size: 96px;
+  margin-top: -24px;
+  margin-right: 12px;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  min-height: 60px;
+}
+
+.testimonial-from {
+  text-align: right;
+}
+
+.testimonial-from::before
+{
+  content: "- ";
+}
+
+.thumbnail-container-0 img, .thumbnail-container-1 img {
+  width: 75%;
+}
+
+.thumbnail-container-3 img {
+  width: 25%;
+}
+
+.thumbnail-container-3 a:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.proj-col {
+  text-align: center;
+}
+.container h2 {
+  font-weight: normal;
+}
+.proj-col p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container .description {
+  height: 60px;
+}
+
+.footer-info {
+  padding: 12px;
+  background-color: #f8f8f8;
+  border: 1px solid;
+  border-color: #e8e8e8;
+}
+
+.company-links {
+  text-align: right;
+  line-height: 1.5em;
+}
+
+.company-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.company-location {
+  font-size:larger;
+}
+
+.company-location .block {
+  float:left;
+}
+
+.company-location .text {
+  margin-left: 24px;
+}
+
+@media (max-width: 979px) {
+	body {
+		padding-top: 0px;
+	}
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.badge-web {
+  .label-primary
+}
+
+.badge-mobile {
+  .label-info
+}
+
+.badge-app {
+  .label-info
+}
+
+.badge-open-source {
+  .label-success
+}
+
+pre {
+  word-wrap: normal;
+}
+
+pre.prettyprint {
+  padding: 9.5px !important;
+  border: 1px solid #ccc !important;
+}
+
+// https://github.com/twbs/bootstrap/issues/9855
+.modal{
+  overflow-y: auto;
+}
+
+.modal-open{
+  overflow:auto;
+  overflow-x:hidden;
+}
+
+#header {
+	margin-top: 30px;
+}
+
+#footer {
+	margin-top: 30px;
+	border-top: 1px solid #eee;
+	padding-top: 30px;
+	color: #999;
+}
+
+blockquote {
+  font-size: 13px !important;
+}
+

@@ -1,0 +1,39 @@
+---
+layout: page
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+      <article>
+        <p><a href="/blog">← back to the blog</a></p>
+        <hr>
+        <header>
+          <h1>{{page.title}}</h1>
+          <p class="lead text-muted">Posted on {{page.date || date_to_string}} in <strong>{{ page.tags | join: ', ' }}</strong> by {{page.author}}</p>
+        </header>
+        <div class="post">
+          {{ content }}
+        </div>
+        
+        {% if site.related_posts != empty %}
+        <aside class="related">
+          <h3>Related Posts</h3>
+          {% for post in site.related_posts limit:3 %}
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+          <br>
+          {% endfor %}
+        </aside>
+        {% endif %}
+
+        <br>
+        <br>
+        
+        {% include disqus.html %}
+      
+      </article>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+---
+layout: page
+title: Blog
+sort: 3
+---
+<div class="container">
+  <div class="jumbotron projects">
+    <h1>Innodroid Blog</h1>
+  </div>
+  <div class="col-sm-8 col-md-9">  
+    <div class="blog">
+      {% for post in paginator.posts %}
+      <div class="post">
+        <h2>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+        <p class="lead text-muted">
+          Posted on {{ post.date | date_to_string }} in {{ post.tags | join: ', ' }} by {{ post.author }}
+        </p>
+        <p>
+          {{ post.excerpt | strip_newlines }}...
+        </p>
+        <p>
+          <a href="{{ site.baseurl }}{{ post.url }}">Read More...</a>
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="pagination">
+      {% if paginator.next_page %}
+        <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+      {% else %}
+        <span class="pagination-item older">Older</span>
+      {% endif %}
+      {% if paginator.previous_page %}
+        <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+      {% else %}
+        <span class="pagination-item newer">Newer</span>
+      {% endif %}
+    </div>
+  </div>
+  <div class="col-sm-4 col-md-3">
+    <h2>Tags</h2>
+    <div style="margin-top: 20px;" class="list-group">
+      <a href="/blog" class="active list-group-item">All Tags</a>
+      {% for tag in site.tags %}
+        <a href="/blog?tag={{ tag | first}}" class="false list-group-item">{{tag | first}}</a> <!-- {{tag | last | size}} -->        
+      {% endfor %}
+     </div>
+   </div>
+</div>

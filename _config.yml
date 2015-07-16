@@ -1,0 +1,5 @@
+highlighter: pygments
+paginate: 100
+paginate_path: "/blog/page:num/"
+baseurl: ''
+permalink: /blog/post/:title
