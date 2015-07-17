@@ -104,6 +104,13 @@ p.hdr {
   margin-left: 24px;
 }
 
+@media screen and (max-width: 767px) {
+  .container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 20px;
+    padding-left: 20px;
+  }  
+}
+
 @media (max-width: 979px) {
 	body {
 		padding-top: 0px;
@@ -114,6 +121,7 @@ p.hdr {
   }
 }
 
+/*
 .badge-web {
   .label-primary
 }
@@ -129,6 +137,7 @@ p.hdr {
 .badge-open-source {
   .label-success
 }
+*/
 
 pre {
   word-wrap: normal;
@@ -139,12 +148,13 @@ pre.prettyprint {
   border: 1px solid #ccc !important;
 }
 
-// https://github.com/twbs/bootstrap/issues/9855
-.modal{
+/* https://github.com/twbs/bootstrap/issues/9855 */
+
+.modal {
   overflow-y: auto;
 }
 
-.modal-open{
+.modal-open {
   overflow:auto;
   overflow-x:hidden;
 }
