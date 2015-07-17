@@ -121,6 +121,12 @@ p.hdr {
   }
 }
 
+@media (min-width: 990px) and (max-width:1200px) {
+  .testimonial .well {
+    min-height: 210px;
+  }
+}
+
 /*
 .badge-web {
   .label-primary
