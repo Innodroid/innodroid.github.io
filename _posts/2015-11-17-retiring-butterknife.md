@@ -23,7 +23,7 @@ Assuming you have a RecyclerView defined with ID "recycler", in Butterknife you 
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View view = inflater.inflate(layout, container, false);
+            View view = inflater.inflate(R.layout.fragment_main, container, false);
 
             ButterKnife.bind(this, view);
 
@@ -41,7 +41,7 @@ And with the data-binding library it's:
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            binding = DataBindingUtil.inflate(inflater, R.layout.fragment_questions_list, container, false);
+            binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
 
             binding.recycler.setLayoutManager(...);
             binding.recycler.setAdapter(...);
