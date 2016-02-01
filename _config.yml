@@ -1,7 +1,11 @@
-highlighter: pygments
 paginate: 100
 paginate_path: "/blog/page:num/"
 baseurl: ''
 permalink: /blog/post/:title
-gems:
- - jekyll-feed
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+markdown: redcarpet 
+redcarpet:
+  extensions: ["strikethrough"] 
+gems: [jekyll-paginate, jekyll-gist]
