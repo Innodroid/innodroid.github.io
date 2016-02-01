@@ -11,13 +11,15 @@ Often it's necessary to set cookies and headers or set the user agent using the 
 
 To set cookies before Lollipop, use the CookieSyncManager and it's synchronous methods:
 
-    CookieSyncManager.createInstance(webView.getContext());
-    CookieManager cookieManager = CookieManager.getInstance();
-    cookieManager.removeSessionCookie();
-   
-    cookieManager.setCookie("name", "value");
-    
-    CookieSyncManager.getInstance().sync();
+{% highlight java %}
+CookieSyncManager.createInstance(webView.getContext());
+CookieManager cookieManager = CookieManager.getInstance();
+cookieManager.removeSessionCookie();
+
+cookieManager.setCookie("name", "value");
+
+CookieSyncManager.getInstance().sync();
+{% endhighlight %}
 
 Note the call to `removeSessionCookie` and `sync` are synchronous and will cause the UI thread will block while they happen. Even though this is probably not an issue because the delay should not be perceptible to the user, it's not ideal.
 
@@ -27,9 +29,11 @@ The good news is you probably don't need those calls, `removeSessionCookie` is l
 
 These methods shown above to manage cookies - in face, the entire manager - was deprecated. You can now do this to do the same:
 
-    CookieManager cookieManager = CookieManager.getInstance();
-    cookieManager.setCookie("name", "value");
-    cookieManager.flush();
+{% highlight java %}
+CookieManager cookieManager = CookieManager.getInstance();
+cookieManager.setCookie("name", "value");
+cookieManager.flush();
+{% endhighlight %}
 
 Again, the `flush` call is synchronous but not actually necessary if you just want to setup the cookies for the webview to render.
 
@@ -39,9 +43,11 @@ Note these calls require API level 21. Your app will crash if you run this on a 
 
 Headers are easy to setup for a webview if you only need them to be set on the initial request for the content made by the webview:
 
-    Map<String, String> headers = new HashMap<>();
-    headers.put("name", "value");
-    web.loadUrl("http://mysite.com", headers);
+{% highlight java %}
+Map<String, String> headers = new HashMap<>();
+headers.put("name", "value");
+web.loadUrl("http://mysite.com", headers);
+{% endhighlight %}
 
 The call to `loadUrl` is overloaded to take an additional parameter, a map of headers.
 
@@ -55,31 +61,33 @@ Settings the headers is more difficult if you want to set them on every request 
 
 Here's a code sample:
 
-    @Override
-    @SuppressWarnings("deprecation")  // Deprecated until api 21
-    public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
-        Uri uri = Uri.parse(url);
+{% highlight java %}
+@Override
+@SuppressWarnings("deprecation")  // Deprecated until api 21
+public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+    Uri uri = Uri.parse(url);
 
-        if (uri.getHost().equalsIgnoreCase(MY_DOMAIN_NAME)) {
-            return loadRequestWithHeaders(url);
-        } else {
-            return super.shouldInterceptRequest(view, url);
-        }
+    if (uri.getHost().equalsIgnoreCase(MY_DOMAIN_NAME)) {
+        return loadRequestWithHeaders(url);
+    } else {
+        return super.shouldInterceptRequest(view, url);
     }
+}
 
-    private WebResourceResponse loadRequestWithHeaders(String url) {
-        try {
-            URL urlObject = new URL(url);
-            HttpURLConnection con = (HttpURLConnection) urlObject.openConnection();
+private WebResourceResponse loadRequestWithHeaders(String url) {
+    try {
+        URL urlObject = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) urlObject.openConnection();
 
-            con.setRequestProperty("headerName", "headerValue");
+        con.setRequestProperty("headerName", "headerValue");
 
-            String[] types = parseContentHeader(con.getContentType());
-            return new WebResourceResponse(types[0], types[1], con.getInputStream());
-        } catch (Exception ex) {
-            return null;
-        }
+        String[] types = parseContentHeader(con.getContentType());
+        return new WebResourceResponse(types[0], types[1], con.getInputStream());
+    } catch (Exception ex) {
+        return null;
     }
+}
+{% endhighlight %}
 
 <strong>Headers (Every Request) - API 21+</strong>
 
@@ -89,5 +97,7 @@ Once again we have an API that was deprecated and replace. For API 21+, you'll w
 
 You could set the user agent by setting the `User-Agent` string as a header shown above, but it also has a dedicated API:
 
-    webview.getSettings().setUserAgentString("My App Agent");
+{% highlight java %}
+webview.getSettings().setUserAgentString("My App Agent");
+{% endhighlight %}
 

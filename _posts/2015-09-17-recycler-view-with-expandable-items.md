@@ -21,7 +21,10 @@ This is an implementation of the recycler view adapter that provides a re-usable
 
 I implemented this by defining a base class, `ExpandableRecyclerAdapter`. It is a generic class that takes one parameters, the list item type:
 
-    public abstract class ExpandableRecyclerAdapter<T extends ExpandableRecyclerAdapter.ListItem> extends RecyclerView.Adapter<ExpandableRecyclerAdapter.ViewHolder> {
+{% highlight java %}
+public abstract class ExpandableRecyclerAdapter<T extends ExpandableRecyclerAdapter.ListItem> 
+    extends RecyclerView.Adapter<ExpandableRecyclerAdapter.ViewHolder> {
+{% endhighlight %}
 
 All the work is done in the adapter class. You do not need to subclass or alter the Reycler View itself.
 

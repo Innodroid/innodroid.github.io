@@ -18,37 +18,41 @@ The thing to like about both these libraries is the way they remove the need for
 
 Assuming you have a RecyclerView defined with ID "recycler", in Butterknife you do it like this:
 
-    public class MyFragment extends Fragment {
-        @Bind(R.id.recycler) RecyclerView recycler;
+{% highlight java %}
+public class MyFragment extends Fragment {
+    @Bind(R.id.recycler) RecyclerView recycler;
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_main, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-            ButterKnife.bind(this, view);
+        ButterKnife.bind(this, view);
 
-            recycler.setLayoutManager(...);
-            recycler.setAdapter(...);
+        recycler.setLayoutManager(...);
+        recycler.setAdapter(...);
 
-            return view;
-        }
+        return view;
     }
+}
+{% endhighlight %}
 
 And with the data-binding library it's:
 
-    public class MyFragment extends Fragment {
-        private MyFragmentBinding binding;
+{% highlight java %}
+public class MyFragment extends Fragment {
+    private MyFragmentBinding binding;
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
 
-            binding.recycler.setLayoutManager(...);
-            binding.recycler.setAdapter(...);
+        binding.recycler.setLayoutManager(...);
+        binding.recycler.setAdapter(...);
 
-            return binding.getRoot();
-        }
+        return binding.getRoot();
     }
+}
+{% endhighlight %}
 
 **Winner**: So, at this point it's a tie. I have no opinion which one is better, they're pretty much the same to me.
 
@@ -56,24 +60,30 @@ And with the data-binding library it's:
 
 In Butterknife you bind a click handler like so:
 
-    @OnClick(R.id.my_button)
-	public void clickButton() {
-	    ...
-	}
+{% highlight xml %}
+@OnClick(R.id.my_button)
+public void clickButton() {
+    ...
+}
+{% endhighlight %}
 
 Awesome, I love that. The code is in the code where it should be.
 
 In the data binding library, you've got to go back to your layout:
 
-    <View ...
-	    onClick="handlers.clickButton">	
+{% highlight xml %}
+<View ....
+    onClick="handlers.clickButton">	
+{% endhighlight %}
 
 And in java:
  
-    public void clickButton(View view) {
-        ....
-	}
-	    
+{% highlight java %}
+public void clickButton(View view) {
+    ....
+}
+{% endhighlight %}
+
 Well, that kind of sucks because I've got the click handler usage seperated from where it is actually defined. *Wait*, I remember this, the `onClick` handler has been possible to define in layout since Android 1 - and it's basically been considered a bad practice since that very day. 
 
 **Winner**: Butterknife 
@@ -84,9 +94,11 @@ Alright so now we get into features that the data-binding library offers that Bu
 
 With the data-binding library you can do stuff like this:
 
-    <TextView
-       android:text="@{user.name}"
-       android:visibility="@{user.isAuthenticated ? View.VISIBLE : View.GONE}" ... />
+{% highlight xml %}
+<TextView
+    android:text="@{user.name}"
+    android:visibility="@{user.isAuthenticated ? View.VISIBLE : View.GONE}" ... />
+{% endhighlight %}
 
 Well, that's neat but if you have been around a while you know *we've seen this before*. I'm going to back to my days in the MS tech stack, way back to classic ASP with a soup of code mixed into markup. Move forward then to .NET with web forms, and even now in Razor syntax, the jumble of data logic hopelessly lost inside markup. 
 
