@@ -7,12 +7,12 @@ excerpt: Today I've retired another library from the toolbox. Here's what I'm us
 ---
 Today I have forever put aside the most excellent [Butterknife Library](https://github.com/JakeWharton/butterknife). This library has served me well but I sadly now bid it farewell. I take my leave of you and retire you back to the utensil drawer from which you came.
 
-##The data-binding library
+## The data-binding library
 
 I was very skeptical of the new [Data-Binding Library](http://developer.android.com/tools/data-binding/guide.html), for reasons explained below. However, with some pretty smart people throwing their weight behind it, and it being an official part of the Google support 
 repository, apparently it's time to actually give it a look. Even if I find it lacking, I will be sure to run across it in many future projects, so at a minimum I need to get to know it.
 
-##Basic usage
+## Basic usage
 
 The thing to like about both these libraries is the way they remove the need for all the bloated Android boilerplate code around accessing the views in your layout. 
 
@@ -56,7 +56,7 @@ public class MyFragment extends Fragment {
 
 **Winner**: So, at this point it's a tie. I have no opinion which one is better, they're pretty much the same to me.
 
-##Click Handlers
+## Click Handlers
 
 In Butterknife you bind a click handler like so:
 
@@ -88,7 +88,7 @@ Well, that kind of sucks because I've got the click handler usage seperated from
 
 **Winner**: Butterknife 
 
-##With More Features
+## With More Features
 
 Alright so now we get into features that the data-binding library offers that Butterknife has no answer to. That's not Butterknife's fault - it [does one thing and does it well](https://en.wikipedia.org/wiki/Unix_philosophy).  
 
@@ -104,7 +104,7 @@ Well, that's neat but if you have been around a while you know *we've seen this 
 
 And still it persists in modern client frameworks, with javascript binding code an unsightly lump of gnarly logic ensared inside your polluted HTML markup.
 
-####Just Don't Take it Too Far!! (Please)
+#### Just Don't Take it Too Far!! (Please)
 
 As far as I can tell this sort of problem isn't present in the data-binding library. It only supports very simplistic conditionals that bind directly to your model. Let's hope it stays that way. Google, please resist the temptation to allow complex code to creep into these layouts where it just doesn't belong. We've seen this before, and it doesn't end well.
  

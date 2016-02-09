@@ -5,12 +5,12 @@ title: A Complex Activity Transition (Part 1)
 tags: [android,transitions,animations]
 excerpt: Activity transitions can provide a very nice effect. They provide continuity from one screen to another and give the user nice feedback as to what's happening. Sadly, the documentation and available resources are entirely lacking on how do it right and how to handle anything more than the most simple case.
 ---
-##Activity Transitions
+## Activity Transitions
 Activity transitions can provide a very nice effect. They provide continuity from one screen to another and give the user nice feedback as to what's happening. Sadly, the documentation and available resources are entirely lacking on how do it right and how to handle anything more than the most simple case. 
 
 This is Part 1 of a series on how to setup and run one of these non-trivial transitions. This part covers the introduction and setup. Part 2 will cover the code and runtime behavior. Part 3 will consist of the demo app itself.
 
-##The Goal
+## The Goal
 
 This is what I want to do:
 
@@ -26,7 +26,7 @@ The requirements are:
 6. If the user swiped to a different image, the transition will occur back to the corresponding thumbnail - not necessrily the one they tapped.
 7. The user may have swiped so many times that the corresponding thumbnail is offscreen. In this case, there is nothing to transition back to, so skip the shared element transition.
 
-##Initial Problems
+## Initial Problems
  
 I have found the Android developer documentation to be quite good for most things. Unfortunately, the [activity transition documentation](http://developer.android.com/training/material/animations.html) is buried in another page about animations, and is somewhat lacking. 
 
@@ -46,14 +46,14 @@ Another problem is in the steps listed there:
 >   - Enable window content transitions in your theme.  
 >   - Specify a shared elements transition in your style.  
 >   - Define your transition as an XML resource.  
->   - ~~Assign a common name to the shared elements in both layouts with the android:transitionName attribute.~~  
+>   - <del>Assign a common name to the shared elements in both layouts with the android:transitionName attribute.</del>  
 >   - Use the ActivityOptions.makeSceneTransitionAnimation() method.  
 
 The step I crossed out above creates problem. While you *can* specify a transitionName attribute to make things easy in a very simple use case (just two images on each activity), that's rarely the use case in a real application. But the documentation leads you to believe you must use the transitionName. So, you may experiment with solutions that at runtime call `setTransitionName` dynamically on the image you want to transition. But you just don't need to go down that path. In fact, you don't need to use it at all!
 
 In general I have stumbled into strange problems with transitions crashing, being glitchy, unreliable, or just not working at all. It's difficult to determine the cause of the problem with nothing to go on. Ultimately you see this resulting in [pull requests like this](https://github.com/MythTV-Clients/MythtvPlayerForAndroid/commit/cf67ee294a9c6358ff3dcabecba4a6cdc76d148e) where the Myth TV folks "fixed" a bug with transitions by just removing them completely. 
 
-##The Setup
+## The Setup
 
 First setup , define your app theme to include these elements:
 
@@ -101,7 +101,7 @@ As I mentioned above, the change image transition (`transit/change_image.xml`) l
 
 This will both transform the image and move/resize it during the transition. Both transforms are required for the shared element transition to work right.
 
-##Performing the Transition 
+## Performing the Transition 
 
 The real work happens at runtime where enter/exit listeners are used to map the shared elements together. That will be the next post in this series, coming soon.
 

@@ -5,7 +5,4 @@ permalink: /blog/post/:title
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-markdown: redcarpet 
-redcarpet:
-  extensions: ["strikethrough"] 
 gems: [jekyll-paginate, jekyll-gist]
