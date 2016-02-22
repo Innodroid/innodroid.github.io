@@ -8,7 +8,7 @@ excerpt: Activity transitions can provide a very nice effect. They provide conti
 ## Activity Transitions
 Activity transitions can provide a very nice effect. They provide continuity from one screen to another and give the user nice feedback as to what's happening. Sadly, the documentation and available resources are entirely lacking on how do it right and how to handle anything more than the most simple case. 
 
-This is Part 1 of a series on how to setup and run one of these non-trivial transitions. This part covers the introduction and setup. Part 2 will cover the code and runtime behavior. Part 3 will consist of the demo app itself.
+This is Part 1 on how to setup and run one of these non-trivial transitions. This part covers the introduction and setup. [Part 2](http://innodroid.com/blog/post/a-complex-activity-transition-part-2) covers the code and runtime behavior and the demo app itself.
 
 ## The Goal
 

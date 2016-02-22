@@ -9,11 +9,13 @@ Activity transitions can provide a very nice effect. They provide continuity fro
 
 [Part 1](http://innodroid.com/blog/post/a-complex-activity-transition-part-1) covered how to setup transition code and this part covers the code to make it happen and includes the demo project.
 
-## Sample Project
+## Demo Project
 
-Before getting into the code to make this happen, here's screen capture video, and also check out the [demo project on GitHub](https://github.com/grennis/ComplexTransitionDemo).
+<iframe width="420" height="315"
+src="http://www.youtube.com/embed/On3dzeAXx-w">
+</iframe>
 
-Now here's the code to make it happen.
+Also check out the [demo project on GitHub](https://github.com/grennis/ComplexTransitionDemo). Now here's the code to make it happen.
 
 ### Launch the Activity
 
