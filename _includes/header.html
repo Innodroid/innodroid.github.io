@@ -18,7 +18,11 @@
             {% for node in pages_list %}
               {% if node.title != null %}
                 {% if node.layout == "page" %}
-                  <li {% if page.url == node.url %} class="active" {% endif %}><a href="{{ node.url | replace:'.html','' | replace:'/index','/' }}" target="_self">{{ node.title }}</a></li>
+                {% unless node.url contains 'blog/page' %}
+                  <li {% if page.url == node.url %} class="active" {% endif %}>
+                    <a href="{{ node.url | replace:'.html','' | replace:'/index','/' }}" target="_self">{{ node.title }}</a>
+                  </li>
+                {% endunless %}
                 {% endif %}
               {% endif %}
             {% endfor %}

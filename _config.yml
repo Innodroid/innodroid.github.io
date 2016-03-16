@@ -1,4 +1,4 @@
-paginate: 100
+paginate: 5
 paginate_path: "/blog/page:num/"
 baseurl: ''
 permalink: /blog/post/:title
