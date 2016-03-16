@@ -187,3 +187,16 @@ blockquote {
 .post blockquote {
   font-size: 15px !important;
 }
+
+.pagination {
+    display: block !important;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px;
+    background-color: #f4f4f4;
+}
+
+.pagination-item.notavailable {
+    color: #ccc;
+}
+
