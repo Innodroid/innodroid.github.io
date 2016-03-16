@@ -30,7 +30,7 @@ When attempting to load a secured page, the logfile from upstart shows this warn
     warn: Microsoft.AspNet.Authentication.Cookies.CookieAuthenticationMiddleware[0]
           Unprotect ticket failed
 
-It turns out that ASP.NET cookie authentication has to to store the cookie data server-side somewhere. When running in a docker container, that local storage was being lost and re-created every time the container was run from the image. 
+It turns out that ASP.NET cookie authentication has to store the cookie data server-side somewhere. When running in a docker container, that local storage was being lost and re-created every time the container was run from the image. 
 
 So after the container is re-run from the image, the cookie sent by the client is not recognized. That causes the error above.
 
@@ -48,6 +48,6 @@ So, that left the option of mounting a host directory to the container on startu
 
 With this option the cookies are now being stored in the host directory /var/aspnet-keys. 
 
-After running the app with this setup, I verified that logging in to the site created an XML file with some cookie information in the host directory. And, after reboot, the user stayed logged in to the site.
+After running the app with this setup, I verified that when a user logs in to the site, the server creates an XML file with some cookie information in the host directory. And, after reboot, the user stayed logged in to the site.
 
  
