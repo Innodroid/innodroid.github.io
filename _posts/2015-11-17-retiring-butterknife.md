@@ -7,6 +7,10 @@ excerpt: Today I've retired another library from the toolbox. Here's what I'm us
 ---
 Today I have forever put aside the most excellent [Butterknife Library](https://github.com/JakeWharton/butterknife). This library has served me well but I sadly now bid it farewell. I take my leave of you and retire you back to the utensil drawer from which you came.
 
+## UPDATE
+
+**Update (5/11/16): I'm back to Butterknife. The data binding library has proven to be awkward and cumbersome and seems to cause longer build times. It also leads to frustrating issue with the tooling (i.e., jumping to errors in generated layouts instead of the real layouts). Butterknife just feels lightweight and does exactly the simple job I need.**
+ 
 ## The data-binding library
 
 I was very skeptical of the new [Data-Binding Library](http://developer.android.com/tools/data-binding/guide.html), for reasons explained below. However, with some pretty smart people throwing their weight behind it, and it being an official part of the Google support 
