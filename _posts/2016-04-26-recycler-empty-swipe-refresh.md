@@ -66,7 +66,7 @@ To understand why this happens, you need to [check out the source code for Swipe
 
 The key point in this code is that the SwipeRefreshLayout checks it's target view - it's one child that it allows - to see if it can scroll up. But in this case, the child view is just a simple `FrameLayout` and the poor FrameLayout doesn't know about scrolling, it's the RecyclerView contained within it that needs to be checked.
 
-So the solution lies in subclassing SwipeRefreshLayout and giving it the understanding that it it contains a **nested** scrollable view. And that's what this class will do (The full gist is [here](https://gist.github.com/grennis/16cb2b0c7f798418284dd2d754499b43)):
+So the solution lies in subclassing SwipeRefreshLayout and giving it the understanding that it contains a **nested** scrollable view. And that's what this class will do:
 
 {% highlight java %}
 public class SwipeRefreshLayoutWithEmpty extends SwipeRefreshLayout {
@@ -90,6 +90,10 @@ public class SwipeRefreshLayoutWithEmpty extends SwipeRefreshLayout {
         }
 
         // The container has 2 children; the empty view and the scrollable view.
+        if (container.getChildCount() != 2) {
+            throw new RuntimeException("Container must have an empty view and content view");
+        }
+
         // Use whichever one is visible and test that it can scroll
         View view = container.getChildAt(0);
         if (view.getVisibility() != View.VISIBLE) {
@@ -109,11 +113,6 @@ public class SwipeRefreshLayoutWithEmpty extends SwipeRefreshLayout {
         for (int i=0; i<getChildCount(); i++) {
             if (getChildAt(i) instanceof ViewGroup) {
                 container = (ViewGroup) getChildAt(i);
-
-                if (container.getChildCount() != 2) {
-                    throw new RuntimeException("Container must have an empty view and content view");
-                }
-
                 break;
             }
         }
