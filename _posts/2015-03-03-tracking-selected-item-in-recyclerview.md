@@ -5,6 +5,10 @@ author: Greg E.
 tags: [android,java,recyclerview]
 excerpt: The RecyclerView widget is the next generation ListView for presenting a list (or grid) of items. It is more lightweight and flexible than ListView, but also therefore requires more application code to craft it to do specifically what's needed.<br><br>This post describes one such example, where the application must take care of tracking a 'selected item' in the list because the RecyclerView doesn't do that like the ListView did.
 ---
+***Update - Please Note***
+
+Since this article was written 2 years ago, more robust solutions are available in open source libraries. For example, see the [Flexible Adapter](https://github.com/davideas/FlexibleAdapter) among others.
+
 **Recycler View**
 
 The ListView widget has been around since Android 1.0 in 2009. It has been the backbone of any list-driven user interface. However, over the years the ListView has taken on too much responsibility and layer on layer of functionality has turned it into a beast. Just check the <a href="https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/java/android/widget/ListView.java">ListView Source Code</a>. That's 4,000 lines of state management and conditional logic just to handle a list of things.
