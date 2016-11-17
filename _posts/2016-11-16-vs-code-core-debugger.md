@@ -3,7 +3,7 @@ layout: post
 author: Greg E.
 title: .NET Core Debugger in VS Code
 tags: [.net,visual studio code,debugger]
-excerpt: 
+excerpt: Misadventure trying to get the VS Code C# debugger working turns out to be a remnant from a much older framework install.
 ---
 ## Background
 
