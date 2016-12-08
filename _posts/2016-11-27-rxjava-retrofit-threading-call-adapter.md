@@ -22,6 +22,8 @@ Well, 100% of the time you want the call to happen on the IO thread, and you *al
 
 This is code that is repeated everywhere. It's boilerplate, does no good and can only lead to mistakes.
 
+**Update**: also see [this post](/blog/post/retrofit-threading-kotlin) for a much shorter solution using Kotlin.
+
 ## Removing the subscribeOn
 
 Recognizing that you always want the call to happen on the IO thread, the [RxJava2CallAdapterFactory](https://github.com/JakeWharton/retrofit2-rxjava2-adapter) offers an overload to set this default when you setup retrofit. Instead of calling
