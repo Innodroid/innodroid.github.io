@@ -7,7 +7,26 @@
 }
 
 .jumbotron h1 {
+    text-align: center;
+    line-height: 400px;
     font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron .links {
+  text-align: center;
+}
+
+.jumbotron .links {
+  color: #888;
+}
+
+.jumbotron .links a:link, .jumbotron .links a:visited, .jumbotron .links a:active {
+  color: #888;
+}
+
+.jumbotron .links a:hover {
+  color: #f00;
+  text-decoration: none;
 }
 
 .jumbotron h1 small {
