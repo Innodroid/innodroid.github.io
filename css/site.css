@@ -1,9 +1,9 @@
 .jumbotron.main {
-  background-image: url("http://res.cloudinary.com/innodroid/image/upload/v1401374852/9256_wpm_hires_lcerst.jpg");
+  background-image: url("https://res.cloudinary.com/innodroid/image/upload/v1401374852/9256_wpm_hires_lcerst.jpg");
 }
 
 .jumbotron.projects {
-  background-image: url("http://res.cloudinary.com/innodroid/image/upload/v1401536642/code_ihdfez.jpg");
+  background-image: url("https://res.cloudinary.com/innodroid/image/upload/v1401536642/code_ihdfez.jpg");
 }
 
 .jumbotron h1 {
@@ -145,24 +145,6 @@ p.hdr {
     min-height: 210px;
   }
 }
-
-/*
-.badge-web {
-  .label-primary
-}
-
-.badge-mobile {
-  .label-info
-}
-
-.badge-app {
-  .label-info
-}
-
-.badge-open-source {
-  .label-success
-}
-*/
 
 pre {
   word-wrap: normal;

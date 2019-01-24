@@ -16,17 +16,3 @@ innodroid.controller('testimonials', ['$scope', function($scope) {
   }
 }]);
 
-innodroid.controller('projects', ['$scope', function($scope) {
-  $scope.projects = projectsLoad;
-  $scope.selectedProject = {};
-
-  $scope.showProject = function(proj) {
-    if (!proj.description) {
-      window.open(proj.link);
-    } else {
-      $scope.selectedProject = proj;
-      $('#projmodal').modal('show');
-    }
-  }
-}]);
-
