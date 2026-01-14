@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Innodroid - Testimonials</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link href="css/site.css" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Ubuntu:700|Bangers" rel="stylesheet" type="text/css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
+</head>
+
+<body>
+
+  <div id="header">
+    <div class="container">
+    </div>
+  </div>
+
+  <div id="body">
+    <div class="container">
+      <div class="jumbotron testimonials">
+        <h1>testimonials</h1>
+      </div>
+
+      <div class="row" x-data="{ testimonials: testimonials }">
+        <template x-for="t in testimonials" :key="t.from">
+          <div class="col-md-6 testimonial">
+            <div class="well well-lg">
+              <div class="testimonial-container">
+                <div class="testimonial-quotechar">“</div>
+                <div class="testimonial-quote" x-text="t.text"></div>
+              </div>
+              <br>
+              <br>
+              <div class="from testimonial-from" x-html="t.from"></div>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <script>
+      var testimonials = [{
+        "from": "Tony Lenzi, CEO, <a href=\"http://www.tacitmobile.com\">Tacit Mobile</a>",
+        "excerpt": "We trusted Innodroid to take an existing suite of Android applications and overhaul them with the latest technologies. They delivered, with reduced maintenance costs and increased installs.",
+        "text": "We trusted Innodroid to take an existing suite of Android applications and overhaul them with the latest technologies. They delivered, with reduced maintenance costs and increased installs."
+      },
+      {
+        "from": "Jay Cann, CTO, <a href=\"http://macquarium.com\" target=\"_blank\">Macquarium</a>",
+        "excerpt": "Fast, efficient, and technically savvy, they’re a preferred partner for some of our highest profile clientele.",
+        "text": "Innodroid has been an invaluable resource, delivering professional service and quality results every time. Fast, efficient, and technically savvy, they’re a preferred partner for some of our highest profile clientele"
+      },
+      {
+        "from": "Mark Enting, VP of IT, <a href=\"http://capt.org\" target=\"_blank\">CAPT</a>",
+        "excerpt": "Projects have been handled with the utmost professionalism and the finished product has always been stable, well done, and of the highest quality.",
+        "text": "The work Innodroid has done for us and their approach to the projects has been handled with utmost professionalism and the finished product has always been stable, well done, and of the highest quality. Innodroid is also really good to work with because of a commitment to deliver a professional product, delivering what and when is promised as well as bringing experience and expertise to the project that goes well beyond ours."
+      },
+      {
+        "from": "Michael Karpovage, <a href=\"http://karpovagecreative.com\" target=\"_blank\">Karpovage Creative</a>",
+        "excerpt": "Always true professionals and helped me on a moment's notice. I was incredibly pleased with the outcome and I highly recommend Innodroid.",
+        "text": "Innodroid was the original developer for my company app. His expertise in programming proved fast, accurate, and even under budget. Always a true professional and helped me on a moment's notice. I was incredibly pleased with the outcome and I highly recommend Innodroid."
+      },
+      {
+        "from": "Garrett Seiger, <a href=\"http://longstreetsolutions.com/\" target=\"_blank\">Longstreet Solutions</a>",
+        "excerpt": "Innodroid is a key partner for our mobile app development needs. Their expertise and experience in this area has been invaluable for us.",
+        "text": "Innodroid is a key partner for our mobile app development needs. Their expertise and experience in this area has been invaluable for us."
+      }];
+    </script>
+  </div>
+
+  <div class="container">
+  </div>
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-51392349-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</body>
+
+</html>

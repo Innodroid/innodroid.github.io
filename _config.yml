@@ -1,8 +1,0 @@
-paginate: 5
-paginate_path: "/blog/page:num/"
-baseurl: ''
-permalink: /blog/post/:title
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-gems: [jekyll-paginate, jekyll-gist]

@@ -1,15 +1,19 @@
 .jumbotron.main {
-  background-image: url("https://res.cloudinary.com/innodroid/image/upload/v1401374852/9256_wpm_hires_lcerst.jpg");
+  background-image: url("/img/main.jpg");
 }
 
-.jumbotron.projects {
-  background-image: url("https://res.cloudinary.com/innodroid/image/upload/v1401536642/code_ihdfez.jpg");
+.jumbotron.testimonials {
+  background-image: url("/img/testimonials.jpg");
 }
 
 .jumbotron h1 {
-    text-align: center;
-    line-height: 400px;
-    font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  line-height: 400px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.jumbotron.testimonials h1 {
+  line-height: 300px;
 }
 
 .jumbotron .links {
@@ -20,7 +24,9 @@
   color: #888;
 }
 
-.jumbotron .links a:link, .jumbotron .links a:visited, .jumbotron .links a:active {
+.jumbotron .links a:link,
+.jumbotron .links a:visited,
+.jumbotron .links a:active {
   color: #888;
 }
 
@@ -30,16 +36,16 @@
 }
 
 .jumbotron h1 small {
-	color: #999;
+  color: #999;
 }
 
 .jumbotron h2 {
-    font-family: 'Bangers', cursive;
-    color: #505050;
+  font-family: 'Bangers', cursive;
+  color: #505050;
 }
 
 p.hdr {
-    font-size: larger;
+  font-size: larger;
 }
 
 .testimonial .well {
@@ -62,12 +68,12 @@ p.hdr {
   text-align: right;
 }
 
-.testimonial-from::before
-{
+.testimonial-from::before {
   content: "- ";
 }
 
-.thumbnail-container-0 img, .thumbnail-container-1 img {
+.thumbnail-container-0 img,
+.thumbnail-container-1 img {
   width: 75%;
 }
 
@@ -83,13 +89,16 @@ p.hdr {
 .proj-col {
   text-align: center;
 }
+
 .container h2 {
   font-weight: normal;
 }
+
 .proj-col p {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .container .description {
   height: 60px;
 }
@@ -112,11 +121,11 @@ p.hdr {
 }
 
 .company-location {
-  font-size:larger;
+  font-size: larger;
 }
 
 .company-location .block {
-  float:left;
+  float: left;
 }
 
 .company-location .text {
@@ -124,16 +133,18 @@ p.hdr {
 }
 
 @media screen and (max-width: 767px) {
-  .container .jumbotron, .container-fluid .jumbotron {
+
+  .container .jumbotron,
+  .container-fluid .jumbotron {
     padding-right: 20px;
     padding-left: 20px;
-  }  
+  }
 }
 
 @media (max-width: 979px) {
-	body {
-		padding-top: 0px;
-	}
+  body {
+    padding-top: 0px;
+  }
 
   h3 {
     font-size: 20px;
@@ -162,19 +173,19 @@ pre.prettyprint {
 }
 
 .modal-open {
-  overflow:auto;
-  overflow-x:hidden;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 #header {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 #footer {
-	margin-top: 30px;
-	border-top: 1px solid #eee;
-	padding-top: 30px;
-	color: #999;
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  color: #999;
 }
 
 blockquote {
@@ -190,15 +201,15 @@ blockquote {
 }
 
 .pagination {
-    display: block !important;
-    text-align: center;
-    font-size: 18px;
-    padding: 8px;
-    background-color: #f4f4f4;
+  display: block !important;
+  text-align: center;
+  font-size: 18px;
+  padding: 8px;
+  background-color: #f4f4f4;
 }
 
 .pagination-item.notavailable {
-    color: #ccc;
+  color: #ccc;
 }
 
 /* Job Posting Styles */
@@ -244,7 +255,7 @@ blockquote {
 .job-content {
   background: white;
   padding: 40px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .job-section {
@@ -282,7 +293,7 @@ blockquote {
   font-size: 15px;
 }
 
-.job-responsibilities, 
+.job-responsibilities,
 .job-requirements,
 .job-benefits {
   list-style: none;
@@ -392,25 +403,24 @@ blockquote {
   .job-content {
     padding: 20px;
   }
-  
+
   .job-header h1 {
     font-size: 28px;
   }
-  
+
   .job-meta {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
-  
+
   .program-details {
     grid-template-columns: 1fr;
   }
-  
+
   .job-apply-footer .btn {
     display: block;
     width: 100%;
     margin: 10px 0;
   }
 }
-

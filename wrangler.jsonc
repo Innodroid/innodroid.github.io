@@ -1,0 +1,7 @@
+{
+  "name": "innodroid-website",
+  "compatibility_date": "2025-06-17",
+  "assets": {
+    "directory": "./src"
+  }
+}
