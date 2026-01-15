@@ -1,0 +1,266 @@
+function CareersPage() {
+    return (
+        <div className="job-posting">
+            <div className="job-header">
+                <h1>Business Operations &amp; Engineering Intern</h1>
+                <div className="job-meta">
+                    <span className="job-location">
+                        <i className="glyphicon glyphicon-map-marker"></i> Remote / Hybrid
+                    </span>
+                    <span className="job-type">
+                        <i className="glyphicon glyphicon-time"></i> Part-Time, Summer 2026
+                    </span>
+                    <span className="job-duration">
+                        <i className="glyphicon glyphicon-calendar"></i> 12 Weeks
+                    </span>
+                </div>
+            </div>
+
+            <div className="job-content well">
+                <section className="job-section">
+                    <h2>About Innodroid</h2>
+                    <p>
+                        Innodroid is a dynamic software development company specializing in mobile and web application
+                        development. We work with cutting-edge technologies to build innovative solutions for our clients
+                        across various industries. Our team is passionate about creating high-quality software that makes
+                        a real impact, and we're committed to fostering an environment where talented individuals can
+                        grow and excel.
+                    </p>
+                </section>
+
+                <section className="job-section">
+                    <h2>Position Overview</h2>
+                    <p>
+                        We are seeking a motivated and talented Business Operations &amp; Engineering Intern to join our
+                        team for the Summer 2026 semester. This is a paid internship opportunity that provides hands-on
+                        experience in real-world software development projects. You will work directly with our
+                        engineering team on live client projects, contributing to both mobile and web applications while
+                        gaining exposure to modern development practices and emerging technologies.
+                    </p>
+                    <p>
+                        This internship is designed to provide meaningful work experience that will prepare you for a
+                        successful career in software engineering. You'll have the opportunity to work on diverse
+                        projects, collaborate with experienced developers, and make tangible contributions to products
+                        used by thousands of users.
+                    </p>
+                </section>
+
+                <section className="job-section">
+                    <h2>Key Responsibilities</h2>
+                    <ul className="job-responsibilities">
+                        <li>
+                            <strong>Financial Operations &amp; Payroll Support:</strong> Assist the accounting department
+                            with preparation and compilation of quarterly payroll reports, ensuring accuracy and
+                            completeness of employee compensation data. Work with financial software systems to generate
+                            reports and verify data integrity. This role provides valuable exposure to business
+                            operations and financial management processes.
+                        </li>
+                        <li>
+                            <strong>Tax Compliance &amp; Documentation:</strong> Support monthly tax deposit
+                            documentation and reporting requirements. Help maintain accurate financial records and ensure
+                            timely compliance with federal and state tax obligations. Collaborate with the accounting
+                            team to organize and file essential business documents. This cross-functional responsibility
+                            offers insight into corporate financial compliance and regulatory requirements.
+                        </li>
+                        <li>
+                            <strong>Feature Development:</strong> Collaborate with senior engineers to gather technical
+                            requirements, design solutions, and implement new features for company mobile applications
+                            (iOS using Swift) and web applications. You will participate in the full development
+                            lifecycle from requirements analysis through deployment.
+                        </li>
+                        <li>
+                            <strong>Quality Assurance &amp; Testing:</strong> Develop and execute comprehensive test
+                            plans for mobile and web applications. Perform manual and automated testing to identify bugs,
+                            document issues in our tracking system, and work with the team to resolve defects. Ensure
+                            high quality standards are maintained across all deliverables.
+                        </li>
+                        <li>
+                            <strong>AI &amp; Automation Research:</strong> Research, evaluate, and prototype AI-powered
+                            coding tools and automation solutions that can enhance developer productivity. Build working
+                            demonstrations of AI-enhanced workflows using modern automation platforms. Present findings
+                            and recommendations to the engineering team for potential company-wide adoption.
+                        </li>
+                        <li>
+                            <strong>Code Review &amp; Documentation:</strong> Participate actively in peer code reviews,
+                            providing constructive feedback and learning best practices from senior developers.
+                            Contribute to technical documentation, including API documentation, architectural decision
+                            records, and user guides. Help maintain and improve our internal knowledge base.
+                        </li>
+                        <li>
+                            <strong>Prototype Development:</strong> Research emerging mobile technologies and development
+                            frameworks. Design and develop proof-of-concept mobile applications to evaluate new
+                            technologies, platforms, or features for potential future client projects. Present prototypes
+                            and technical assessments to the team.
+                        </li>
+                        <li>
+                            <strong>Agile Team Participation:</strong> Attend and contribute to daily stand-up meetings,
+                            sprint planning sessions, and retrospectives. Learn and practice Agile/Scrum methodologies in
+                            a professional development environment. Track your work using project management tools and
+                            provide regular status updates.
+                        </li>
+                        <li>
+                            <strong>Technical Support:</strong> Provide technical support for production applications,
+                            including investigating user-reported issues, reproducing bugs, and assisting with incident
+                            response. Learn to analyze logs, monitor application performance, and communicate effectively
+                            with stakeholders about technical issues.
+                        </li>
+                        <li>
+                            <strong>Continuous Learning:</strong> Engage in ongoing professional development by attending
+                            code reviews, technical presentations, and training sessions. Stay current with industry
+                            trends, emerging technologies, and best practices in software engineering. Share knowledge
+                            with the team through informal presentations or lunch-and-learn sessions.
+                        </li>
+                    </ul>
+                </section>
+
+                <section className="job-section">
+                    <h2>Required Qualifications</h2>
+                    <ul className="job-requirements">
+                        <li>
+                            Currently enrolled in a Bachelor's or Master's degree program in Computer Science, Software
+                            Engineering, or related technical field
+                        </li>
+                        <li>Expected graduation date of December 2026 or later</li>
+                        <li>
+                            Solid understanding of computer science fundamentals including data structures, algorithms,
+                            and object-oriented programming
+                        </li>
+                        <li>
+                            Proficiency in at least one modern programming language (Swift, Kotlin, Java, JavaScript,
+                            Python, etc.)
+                        </li>
+                        <li>Strong problem-solving skills and attention to detail</li>
+                        <li>Excellent written and verbal communication skills</li>
+                        <li>Ability to work both independently and collaboratively in a team environment</li>
+                        <li>Demonstrated passion for technology and software development</li>
+                        <li>Authorized to work in the United States</li>
+                    </ul>
+                </section>
+
+                <section className="job-section">
+                    <h2>Preferred Qualifications</h2>
+                    <ul className="job-requirements">
+                        <li>
+                            Interest in business operations, financial processes, and how companies manage their finances
+                        </li>
+                        <li>
+                            Willingness to learn about payroll systems, accounting software, and financial reporting
+                        </li>
+                        <li>
+                            Attention to detail and interest in learning about tax compliance and regulatory requirements
+                        </li>
+                        <li>Some experience in programming languages such as Python, Java, JavaScript, or similar</li>
+                        <li>
+                            Interest in web or mobile development technologies and willingness to learn modern frameworks
+                        </li>
+                        <li>Curiosity about APIs, databases, and how applications store and share data</li>
+                        <li>
+                            Willingness to learn development tools such as version control (Git) and testing
+                            methodologies
+                        </li>
+                        <li>Enthusiasm for learning about AI coding assistants and automation tools</li>
+                        <li>Personal projects, coursework examples, or demonstrated interest in software development</li>
+                    </ul>
+                </section>
+
+                <section className="job-section">
+                    <h2>What We Offer</h2>
+                    <ul className="job-benefits">
+                        <li>
+                            <strong>Competitive Compensation:</strong> Industry-competitive hourly rate for the duration
+                            of the internship
+                        </li>
+                        <li>
+                            <strong>Flexible Work Environment:</strong> Remote and hybrid options available to
+                            accommodate your preferences
+                        </li>
+                        <li>
+                            <strong>Real-World Experience:</strong> Work on production applications with real users, not
+                            just toy projects
+                        </li>
+                        <li>
+                            <strong>Mentorship:</strong> Direct access to experienced engineers who are invested in your
+                            growth
+                        </li>
+                        <li>
+                            <strong>Learning Opportunities:</strong> Exposure to modern development tools, practices, and
+                            technologies
+                        </li>
+                        <li>
+                            <strong>Career Development:</strong> Potential for return offers and full-time employment
+                            after graduation
+                        </li>
+                        <li>
+                            <strong>Collaborative Culture:</strong> Supportive team environment that values diverse
+                            perspectives
+                        </li>
+                        <li>
+                            <strong>Modern Tech Stack:</strong> Work with current technologies and industry-standard
+                            development tools
+                        </li>
+                    </ul>
+                </section>
+
+                <section className="job-section">
+                    <h2>Program Details</h2>
+                    <div className="program-details">
+                        <div className="detail-item">
+                            <h3>Duration</h3>
+                            <p>12-week program, May - August 2026 (exact dates flexible)</p>
+                        </div>
+                        <div className="detail-item">
+                            <h3>Hours</h3>
+                            <p>Approximately 20 hours per week, flexible schedule</p>
+                        </div>
+                        <div className="detail-item">
+                            <h3>Location</h3>
+                            <p>Remote or hybrid arrangement available</p>
+                        </div>
+                        <div className="detail-item">
+                            <h3>Start Date</h3>
+                            <p>Late May / Early June 2026</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="job-section">
+                    <h2>How to Apply</h2>
+                    <p>
+                        To apply for this position, please send your resume, cover letter, and any relevant portfolio
+                        materials to{' '}
+                        <a href="mailto:careers@innodroid.com" className="email-link">
+                            careers@innodroid.com
+                        </a>{' '}
+                        with the subject line "Business Operations &amp; Engineering Intern - Summer 2026".
+                    </p>
+                    <p>In your cover letter, please tell us about:</p>
+                    <ul>
+                        <li>Why you're interested in this internship opportunity</li>
+                        <li>Relevant coursework, projects, or experience</li>
+                        <li>What you hope to learn and accomplish during the internship</li>
+                        <li>Your availability and preferred work arrangement (remote/hybrid)</li>
+                    </ul>
+                    <p className="application-note">
+                        <em>
+                            Applications will be reviewed on a rolling basis. We encourage early applications as
+                            positions are limited. We are committed to creating a diverse and inclusive workplace and
+                            encourage applications from all qualified candidates.
+                        </em>
+                    </p>
+                </section>
+
+                <section className="job-section equal-opportunity">
+                    <p>
+                        <strong>Innodroid is an Equal Opportunity Employer.</strong> We are committed to building a
+                        diverse team and creating an inclusive environment for all employees. All qualified applicants
+                        will receive consideration for employment without regard to race, color, religion, gender, gender
+                        identity or expression, sexual orientation, national origin, genetics, disability, age, or
+                        veteran status.
+                    </p>
+                </section>
+            </div>
+        </div>
+    );
+}
+
+export default CareersPage;

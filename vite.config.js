@@ -1,20 +1,12 @@
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+    plugins: [react()],
     root: 'src',
     build: {
         outDir: '../dist',
         emptyOutDir: true,
         minify: 'esbuild',
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'src/index.html'),
-                careers: resolve(__dirname, 'src/careers.html'),
-                testimonials: resolve(__dirname, 'src/testimonials.html'),
-                eb_privacy: resolve(__dirname, 'src/eb/privacy-policy.html'),
-                mcc_privacy: resolve(__dirname, 'src/mcc/privacy-policy.html'),
-            },
-        },
     },
 });
